@@ -36,20 +36,26 @@ export function LegalNavbar() {
           />
         </Link>
 
-        <div className="nav-links">
-          {links.map((link) => {
-            const isActive = pathname === link.href;
+        <div className="nav-actions">
+          <div className="nav-links">
+            {links.map((link) => {
+              const isActive = pathname === link.href;
 
-            return (
-              <Link
-                key={link.href}
-                href={link.href}
-                className={`nav-link ${isActive ? "nav-link-active" : ""}`.trim()}
-              >
-                {link.label}
-              </Link>
-            );
-          })}
+              return (
+                <Link
+                  key={link.href}
+                  href={link.href}
+                  className={`nav-link ${isActive ? "nav-link-active" : ""}`.trim()}
+                >
+                  {link.label}
+                </Link>
+              );
+            })}
+          </div>
+
+          <a className="nav-contact" href="mailto:support@ma3llc.co">
+            support@ma3llc.co
+          </a>
         </div>
       </nav>
     </header>

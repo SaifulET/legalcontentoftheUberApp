@@ -1,7 +1,7 @@
 :root {
-  --background: #f6f1e8;
-  --surface: rgba(255, 255, 255, 0.82);
-  --surface-strong: #ffffff;
+  --background: #ecebef;
+  --surface: rgba(255, 255, 255, 0.86);
+  --surface-strong: #f9f8fb;
   --foreground: #1f2937;
   --muted: #5f6b7a;
   --border: rgba(31, 41, 55, 0.12);
@@ -23,9 +23,9 @@ body {
   min-height: 100vh;
   color: var(--foreground);
   background:
-    radial-gradient(circle at top left, rgba(15, 118, 110, 0.14), transparent 28%),
-    radial-gradient(circle at top right, rgba(217, 119, 6, 0.18), transparent 24%),
-    linear-gradient(180deg, #f8f4eb 0%, #f4efe5 100%);
+    radial-gradient(circle at top left, rgba(15, 118, 110, 0.12), transparent 28%),
+    radial-gradient(circle at top right, rgba(99, 102, 241, 0.08), transparent 24%),
+    linear-gradient(180deg, #f4f3f6 0%, var(--background) 100%);
   font-family: Arial, Helvetica, sans-serif;
 }
 
@@ -49,7 +49,7 @@ a {
   top: 0;
   z-index: 10;
   backdrop-filter: blur(12px);
-  background: rgba(248, 244, 235, 0.78);
+  background: rgba(236, 235, 239, 0.86);
   border-bottom: 1px solid var(--border);
 }
 
@@ -83,6 +83,15 @@ a {
   flex-wrap: wrap;
 }
 
+.nav-actions {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 18px;
+  flex: 1;
+  flex-wrap: wrap;
+}
+
 .nav-link {
   padding: 10px 16px;
   border-radius: 999px;
@@ -103,6 +112,16 @@ a {
   border-color: var(--accent);
 }
 
+.nav-contact {
+  color: var(--foreground);
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.nav-contact:hover {
+  color: var(--accent);
+}
+
 .legal-card {
   width: 100%;
   background: var(--surface);
@@ -121,7 +140,6 @@ a {
   width: 100%;
   background:
     radial-gradient(circle at top left, rgba(15, 118, 110, 0.16), transparent 28%),
-    radial-gradient(circle at bottom right, rgba(217, 119, 6, 0.16), transparent 24%),
     var(--surface);
   border: 1px solid rgba(255, 255, 255, 0.65);
   border-radius: 28px;
@@ -191,7 +209,7 @@ a {
   align-self: stretch;
   padding: 24px;
   border-radius: 24px;
-  background: linear-gradient(180deg, rgba(15, 118, 110, 0.1), rgba(255, 255, 255, 0.9));
+  background: linear-gradient(180deg, rgba(15, 118, 110, 0.1), rgba(249, 248, 251, 0.94));
 }
 
 .home-highlight-label {
@@ -293,7 +311,7 @@ a {
   border-radius: 24px;
   padding: 24px;
   background:
-    linear-gradient(180deg, rgba(255, 255, 255, 0.95), rgba(250, 247, 240, 0.9));
+    linear-gradient(180deg, rgba(255, 255, 255, 0.95), rgba(244, 243, 246, 0.92));
 }
 
 .home-journey {
@@ -337,7 +355,7 @@ a {
   padding: 32px 32px 18px;
   border-bottom: 1px solid var(--border);
   background:
-    linear-gradient(135deg, rgba(15, 118, 110, 0.12), rgba(217, 119, 6, 0.08)),
+    linear-gradient(135deg, rgba(15, 118, 110, 0.12), rgba(99, 102, 241, 0.08)),
     var(--surface-strong);
 }
 
@@ -501,7 +519,17 @@ a {
     grid-template-columns: 1fr;
   }
 
+  .nav-actions {
+    width: 100%;
+    display: grid;
+    gap: 12px;
+  }
+
   .nav-link {
+    text-align: center;
+  }
+
+  .nav-contact {
     text-align: center;
   }
 
